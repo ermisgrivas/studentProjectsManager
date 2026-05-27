@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Project</title>
+
+    <link rel="stylesheet" href="techlog_style.css">
+</head>
+
+<body class="menuBody">
+
+    <div class="logo-container">
+        <img src="logo.png" alt="Logo" class="logo">
+    </div>
+
+    <h1 class="welcome-text" id="welcome-text">Welcome + name!!!</h1>
+
+    <div class="menu-layout">
+
+        <!-- αριστερό πλαίσιο ενεργειών κλπ -->
+        <div class="side-menu">
+
+            <button class="menu-button" onclick="goToMainMenu()">
+                Main Menu
+            </button>
+            
+            <button class="menu-button" onclick="goToProjectPage()">
+                Create Project
+            </button>
+
+            <button class="menu-button" onclick="viewTeams()">
+                View Student Teams
+            </button>
+
+            <button class="menu-button" onclick="gradeProjects()">
+                Grade Projects
+            </button>
+
+            <button class="menu-button" onclick="contactAdmin()">
+                Contact Admin
+            </button>
+
+        </div>
+
+        <!-- βασικό πλαίσιο -->
+        <div class="content-frame" id="content-frame">
+
+            <h2 class="frame-title">lalalala</h2>
+
+            <p class="placeholder-text" id="placeholder-text">
+                Choose action
+            </p>
+
+        </div>
+
+    </div>
+
+    <button onclick="location.href='startpage.html'" class="logout-button">
+        Logout
+    </button>
+
+    <script>
+
+        const frame = document.getElementById("content-frame")
+        const wltext = document.getElementById("welcome-text")
+
+        function goToMainMenu() {
+
+            wltext.innerHTML = "Welcome + name!!!"
+            frame.innerHTML = `
+
+            <h2 class="frame-title">lalalala</h2>
+
+            <p class="placeholder-text" id="placeholder-text">
+                Choose action
+            </p>
+
+    `;
+        }
+        
+        function goToProjectPage() {
+
+            wltext.innerHTML = "Fill in the form to create a project:"
+            frame.innerHTML = `
+
+            <form class="form1" action="teacherpage.html">
+
+                <label for="subject">Subject: </label><br>
+                <select id="subject" name="subject">
+                <option value="Subject1">Subject 1</option>
+                <option value="Subject2">Subject 2</option>
+                </select><br>
+                <label for="duedate">Due date: </label><br>
+                <input type="datetime-local" id="duedate" name="duedate" required><br>
+                <label for="maxgrade">Max Grade: </label><br>
+                <input type="number" id="maxgrade" name="maxgrade" value="1" min="1" max="10" required><br>
+                <label for="maxmembers">Max Members: </label><br>
+                <input type="number" id="maxmembers" name="maxmembers" value="1" min="1" required><br>
+                <label for="instructions">Instructions: </label><br>
+                <textarea class="instructions" id="instructions" name="instructions" required></textarea><br>
+                <input type="submit" class="submit" id="submit" name="submit">
+                <input type="reset" class="reset" id="reset" name="reset">
+
+            </form>
+
+    `;
+        }
+
+    function contactAdmin() {
+
+            wltext.innerHTML = "Send a request to an admin of your choice:"
+            frame.innerHTML = `
+
+            <form class="form1" action="teacherpage.html">
+
+                <label for="adminName">Admin: </label><br>
+                <select id="adminName" name="adminName">
+                <option value="Admin1">Admin 1</option>
+                <option value="Admin2">Admin 2</option>
+                </select><br>
+                <label for="requestType">Request Type: </label><br>
+                <select id="requestType" name="requestType">
+                <option value="deleteAccount">Delete Account</option>
+                <option value="textRequest">Text Request</option>
+                </select><br>
+                <label for="comments">Comments: </label><br>
+                <textarea class="comments" id="comments" rows="7" name="comments" required></textarea><br>
+                <input type="submit" class="submit" id="submit" name="submit">
+                <input type="reset" class="reset" id="reset" name="reset">
+
+            </form>
+
+    `;
+        }    
+
+        function viewTeams() {
+            
+            wltext.innerHTML = "Currently assigned teams:"
+            frame.innerHTML = `
+
+            <ol>
+                <li>Name, AM<br>Name, AM</li>
+                <li>Name, AM</li>
+                <li>Name, AM<br>Name, AM<br>Name, AM</li>
+                <li>Name, AM</li>
+                <li>Name, AM</li>
+            </ol>
+            
+
+    `;
+
+        }
+
+    function gradeProjects() {
+            
+            wltext.innerHTML = "Currently completed projects:"
+            frame.innerHTML = `
+
+            <ol>
+                <li>p1.zip<br>Date subbed: dd/mm/yy<br>ID: 1</li>
+                <li>p2.zip<br>Date subbed: dd/mm/yy<br>ID: 2</li>
+                <li>p3.zip<br>Date subbed: dd/mm/yy<br>ID: 3</li>
+                <li>p4.zip<br>Date subbed: dd/mm/yy<br>ID: 4</li>
+                <li>p5.zip<br>Date subbed: dd/mm/yy<br>ID: 5</li>
+            </ol>
+
+            <form class="form1" action="teacherpage.html">
+
+                <label for="teamid">Select team by ID: </label><br>
+                <input type="number" id="teamid" name="teamid" value="1" min="1" required><br>
+                <label for="grade">Assign grade: </label><br>
+                <input type="number" id="grade" name="grade" value="1" min="1" required><br>
+                <input type="submit" class="submit" id="submit" name="submit">
+
+            </form>
+
+    `;
+
+        }    
+    </script>
+
+  
+
+</body>
+
+</html>
