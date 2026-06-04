@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="techlog_style.css">
 </head>
 
-<body class="menuBody">
+<body class="body2">
 
     <div class="logo-container">
         <img src="logo.png" alt="Logo" class="logo">
@@ -63,6 +63,27 @@
 
     <script>
 
+        let selectedRow = null;
+
+        function selectRow(row) {
+
+            // deselection
+            if (selectedRow === row) {
+                row.classList.remove("selected");
+                selectedRow = null;
+                return;
+            }
+
+            // remove previous selected row
+            document.querySelectorAll(".grid-table tr.selected").forEach(r => {
+                r.classList.remove("selected");
+            });
+
+            // new row
+            row.classList.add("selected");
+            selectedRow = row;
+        }
+
         const frame = document.getElementById("content-frame")
         const wltext = document.getElementById("welcome-text")
 
@@ -113,40 +134,76 @@
             wltext.innerHTML = "Send a request to an admin of your choice:"
             frame.innerHTML = `
 
-            <form class="form1" action="teacherpage.html">
+        <h2 class="content-title">Contact Admin</h2>
 
-                <label for="adminName">Admin: </label><br>
-                <select id="adminName" name="adminName">
-                <option value="Admin1">Admin 1</option>
-                <option value="Admin2">Admin 2</option>
-                </select><br>
-                <label for="requestType">Request Type: </label><br>
-                <select id="requestType" name="requestType">
-                <option value="deleteAccount">Delete Account</option>
-                <option value="textRequest">Text Request</option>
-                </select><br>
-                <label for="comments">Comments: </label><br>
-                <textarea class="comments" id="comments" rows="7" name="comments" required></textarea><br>
-                <input type="submit" class="submit" id="submit" name="submit">
-                <input type="reset" class="reset" id="reset" name="reset">
+        <table class="grid-table">
 
-            </form>
+        <tr>
+        <th>Admin</th>
+        <th>Status</th>
+        </tr>
 
-    `;
-        }    
+        <tr onclick="selectRow(this)">
+        <td>Evdokia</td>
+        <td>Online</td>
+        </tr>
+
+        <tr onclick="selectRow(this)">
+        <td>Evdoksos</td>
+        <td>Offline</td>
+        </tr>
+
+        </table>
+
+        <div class="chat-box">
+
+        <div class="chat-message">
+        Admin: Xairete ths esperas
+        </div>
+
+        <div class="chat-message">
+        You: Geia
+        </div>
+
+        </div>
+
+        <textarea placeholder="Write message"></textarea>
+
+        <div class="action-buttons">
+
+        <button>Send</button>
+
+        </div>
+
+        `;
+    }   
 
         function viewTeams() {
             
             wltext.innerHTML = "Currently assigned teams:"
             frame.innerHTML = `
 
-            <ol>
-                <li>Name, AM<br>Name, AM</li>
-                <li>Name, AM</li>
-                <li>Name, AM<br>Name, AM<br>Name, AM</li>
-                <li>Name, AM</li>
-                <li>Name, AM</li>
-            </ol>
+            <h2 class="content-title">Teams</h2>
+
+            <table class="grid-table">
+
+            <tr>
+            <th>ID</th>
+            <th>Members</th>
+            </tr>
+
+            <tr onclick="selectRow(this)">
+            <td>1</td>
+            <td>Ermis Grivas, p23033<br>Haris Liakos, p0000<br>Vaggelis Maras, p11111</td>
+            </tr>
+
+            <tr onclick="selectRow(this)">
+            <td>2</td>
+            <td>Tzoumpi, AM<br>Gav, AM</td>
+            </tr>
+
+            </table>
+
             
 
     `;
@@ -158,23 +215,35 @@
             wltext.innerHTML = "Currently completed projects:"
             frame.innerHTML = `
 
-            <ol>
-                <li>p1.zip<br>Date subbed: dd/mm/yy<br>ID: 1</li>
-                <li>p2.zip<br>Date subbed: dd/mm/yy<br>ID: 2</li>
-                <li>p3.zip<br>Date subbed: dd/mm/yy<br>ID: 3</li>
-                <li>p4.zip<br>Date subbed: dd/mm/yy<br>ID: 4</li>
-                <li>p5.zip<br>Date subbed: dd/mm/yy<br>ID: 5</li>
-            </ol>
+            <h2 class="content-title">Projects</h2>
 
-            <form class="form1" action="teacherpage.html">
+            <table class="grid-table">
 
-                <label for="teamid">Select team by ID: </label><br>
-                <input type="number" id="teamid" name="teamid" value="1" min="1" required><br>
-                <label for="grade">Assign grade: </label><br>
-                <input type="number" id="grade" name="grade" value="1" min="1" required><br>
-                <input type="submit" class="submit" id="submit" name="submit">
+            <tr>
+            <th>Team ID</th>
+            <th>Project file</th>
+            <th>Submission date</th>
+            </tr>
 
-            </form>
+            <tr onclick="selectRow(this)">
+            <td>1</td>
+            <td>p1.zip</td>
+            <td>3/6/2026</td>
+            </tr>
+
+            <tr onclick="selectRow(this)">
+            <td>2</td>
+            <td>p2.zip</td>
+            <td>6/7/6767</td>
+            </tr>
+
+            </table><br><br>
+
+            <form class="form1" action="teacherpage.html"
+            <label for="gradeAssigned">Assign grade: </label><br>
+            <input type="number" id="gradeAssigned" name="gradeAssigned" value="1" min="1" required><br>
+            <input type="submit" class="submit" id="submit" name="submit">
+            <input type="reset" class="reset" id="reset" name="reset">
 
     `;
 
