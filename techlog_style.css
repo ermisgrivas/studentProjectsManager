@@ -11,8 +11,8 @@
       flex-direction: column;
  }
 
- /*σελίδες μενού*/
- .menuBody{
+ /*σελίδα μαθητή*/
+ .body2{
     background-image: url("default.png");
 
     background-size: cover;
@@ -86,20 +86,6 @@ input, select, textarea {
 
     font-family: fantasy;
     font-size: 16px;
-}
-
-.instructions, .comments {
-    width: 100%;
-}
-
-.submit {
-    border-color: lawngreen;
-    background-color: lawngreen;
-}
-
-.reset {
-    border-color:lightcoral;
-    background-color: lightcoral;
 }
 
 /* κουμπιά */
@@ -185,24 +171,6 @@ button:hover {
     overflow-y: auto;
 }
 
-.projectform {
-    flex: 0.8;
-
-    background-color: rgba(255, 245, 230, 0.95);
-
-    border-radius: 30px;
-
-    padding: 35px;
-
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
-
-    overflow-y: auto;
-}
-
-.subject {
-  width: 350px;
-}
-
 /* placeholder μηνύματα */
 
 .placeholder-text {
@@ -221,4 +189,129 @@ button:hover {
     right: 20px;
 
     width: 180px;
+}
+
+
+.content-title{
+    color:#a0522d;
+    font-size:32px;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.grid-container{
+    margin-top:20px;
+}
+
+.grid-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.grid-table th{
+    background-color:#f46700;
+    color:white;
+    padding:12px;
+}
+
+.grid-table td{
+    padding:12px;
+    border:1px solid #d4a373;
+    text-align:center;
+}
+
+.grid-table tr:hover{
+    background-color:#ffe7cf;
+    cursor:pointer;
+}
+
+.details-panel{
+    margin-top:25px;
+    padding:20px;
+    border-radius:20px;
+    background-color:#fff8ee;
+    border:2px solid #f46700;
+}
+
+.details-panel h3{
+    color:#a0522d;
+}
+
+.details-panel textarea{
+    width:95%;
+    min-height:120px;
+}
+
+.action-buttons{
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.chat-box{
+    height:300px;
+    overflow-y:auto;
+    border:2px solid #f46700;
+    border-radius:20px;
+    background:white;
+    padding:15px;
+    margin-top:15px;
+}
+
+.chat-message{
+    margin-bottom:15px;
+    color:#8b4513;
+}
+
+.notification-section{
+    margin-bottom:30px;
+}
+
+.dual-panel{
+    display:flex;
+    gap:20px;
+    margin-top:20px;
+}
+
+.dual-panel > div{
+    flex:1;
+}
+
+.member-list{
+    height:250px;
+    overflow-y:auto;
+}
+
+.grid-table tr.selected {
+    background-color: #ffd199;
+}
+
+.grid-table tr:hover {
+    background-color: #ffe7cf;
+}
+
+.submit {
+    border-color: lawngreen;
+    background-color: lawngreen;
+}
+
+.reset {
+    border-color:lightcoral;
+    background-color: lightcoral;
+}
+
+.submit:hover {
+    transform: scale(1.05);
+    background-color: lime;
+}
+
+.reset:hover {
+    transform: scale(1.05);
+    background-color: indianred;
+}
+
+textarea {
+    width: 100%;
 }
