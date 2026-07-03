@@ -1,0 +1,368 @@
+.frame form {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.menu-layout{
+    width: 90%;
+    height: 70vh;
+
+    display: flex;
+    gap: 30px;
+
+    align-items: stretch;
+}
+/*login page*/
+.body1{
+    background-image:url("pixels.jpg");
+    background-size:100%;
+    padding: 0;
+    font-family: fantasy;
+    margin:0;
+	  display:flex;
+	  height:100vh;
+	  align-items:center;
+      flex-direction: column;
+ }
+
+ /*σελίδα μαθητή*/
+ .body2{
+    background-image: url("default.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 0;
+    margin: 0;
+
+    font-family: fantasy;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+ /* logo */
+
+.logo-container {
+    margin-top: 20px;
+}
+
+.logo {
+    width: 160px;
+    height: 64px;
+}
+
+.welcome-text {
+    color: #8b4513;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-size: 40px;
+}
+
+/* κεντρικό πλαίσιο */
+
+.frame {
+    background-color: rgba(255, 245, 230, 0.95);
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 320px;
+    transition: 0.3s;
+}
+
+.frame form{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:100%;
+}
+
+.frame input,
+.frame select{
+    display:block;
+}
+
+/* τίτλοι */
+
+.frame-title {
+    font-size: 30px;
+    color: #a0522d;
+    margin-bottom: 25px;
+}
+
+/* πεδία για συμπλήρωση */
+
+input, select {
+    width: 250px;
+    padding: 12px;
+    margin: 10px 0;
+
+    border: 2px solid #ffb347;
+    border-radius: 12px;
+
+    background-color: #fff8ee;
+
+    font-family: fantasy;
+    font-size: 16px;
+}
+
+/* κουμπιά */
+
+button {
+    width: 200px;
+    padding: 12px;
+    margin: 10px;
+
+    border: none;
+    border-radius: 15px;
+
+    background-color: #f46700;
+    color: white;
+
+    font-family: fantasy;
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #c86628;
+    transform: scale(1.05);
+}
+
+/* οργάνωση κουμπιών */
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.student-layout {
+    width: 90%;
+    height: 70vh;
+
+    display: flex;
+    gap: 30px;
+}
+
+/* αριστερό μενού σελίδας μαθητή */
+
+.side-menu {
+    width: 250px;
+
+    background-color: rgba(255, 245, 230, 0.95);
+
+    border-radius: 30px;
+
+    padding: 25px;
+
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* κουμπιά μενού */
+
+.menu-button {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* κεντρικό πλαίσιο */
+
+.content-frame {
+    flex: 1;
+
+    background-color: rgba(255, 245, 230, 0.95);
+
+    border-radius: 30px;
+
+    padding: 35px;
+
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+
+    overflow-y: auto;
+}
+
+/* placeholder μηνύματα */
+
+.placeholder-text {
+    color: #8b4513;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* logout */
+
+.logout-button {
+    position: absolute;
+
+    bottom: 20px;
+    right: 20px;
+
+    width: 180px;
+}
+
+
+.content-title{
+    color:#a0522d;
+    font-size:32px;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.grid-container{
+    margin-top:20px;
+}
+
+.grid-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.grid-table th{
+    background-color:#f46700;
+    color:white;
+    padding:12px;
+}
+
+.grid-table td{
+    padding:12px;
+    border:1px solid #d4a373;
+    text-align:center;
+}
+
+.grid-table tr:hover{
+    background-color:#ffe7cf;
+    cursor:pointer;
+}
+
+.details-panel{
+    margin-top:25px;
+    padding:20px;
+    border-radius:20px;
+    background-color:#fff8ee;
+    border:2px solid #f46700;
+}
+
+.details-panel h3{
+    color:#a0522d;
+}
+
+.details-panel textarea{
+    width:95%;
+    min-height:120px;
+}
+
+.action-buttons{
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.chat-box{
+    height:300px;
+    overflow-y:auto;
+    border:2px solid #f46700;
+    border-radius:20px;
+    background:white;
+    padding:15px;
+    margin-top:15px;
+}
+
+.chat-message{
+    margin-bottom:15px;
+    color:#8b4513;
+}
+
+.notification-section{
+    margin-bottom:30px;
+}
+
+.dual-panel{
+    display:flex;
+    gap:20px;
+    margin-top:20px;
+}
+
+.dual-panel > div{
+    flex:1;
+}
+
+.member-list{
+    height:250px;
+    overflow-y:auto;
+}
+
+.grid-table tr.selected {
+    background-color: #ffd199;
+}
+
+.grid-table tr:hover {
+    background-color: #ffe7cf;
+}
+
+.chat-input {
+    width: 95%;
+    min-height: 50px;
+    padding: 15px;
+    margin-top: 15px;
+    border: 2px solid #f46700;
+    border-radius: 20px;
+    background-color: #fff8ee;
+    color: #8b4513;
+    font-family: fantasy;
+    font-size: 16px;
+    resize: vertical;
+    outline: none;
+}
+
+.chat-input:focus {
+    border-color: #c86628;
+    box-shadow: 0px 0px 8px rgba(244, 103, 0, 0.4);
+}
+
+.submit {
+	background-color: #43f50c;
+	border-color: #43f50c;
+}
+
+.submit:hover {
+	transform: scale(1.05);
+}
+
+.reset {
+	background-color: #f54c4c;
+	border-color: #f54c4c;
+}
+
+.reset:hover {
+	transform: scale(1.05);
+}
+
+.instructions {
+	width:95%;
+    min-height:120px;
+    border: 2px solid #ffb347;
+    border-radius: 12px;
+    background-color: #fff8ee;
+    font-family: fantasy;
+    font-size: 16px;
+}
